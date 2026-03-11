@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth page transitions */
+main {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pattern background for hero */
+.hero-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.1) 0%, transparent 40%);
+}
+
+/* Kente-inspired decorative border */
+.kente-border {
+  border-image: repeating-linear-gradient(
+    90deg,
+    #c0392b 0px, #c0392b 10px,
+    #f39c12 10px, #f39c12 20px,
+    #27ae60 20px, #27ae60 30px,
+    #1a1a1a 30px, #1a1a1a 40px
+  ) 4;
+}
